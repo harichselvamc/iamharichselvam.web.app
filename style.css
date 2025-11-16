@@ -1007,3 +1007,25 @@ header nav.active {
     opacity: 1;
     transform: translateY(0);
 }
+.contact-link {
+    color: inherit;              /* match section text color automatically */
+    text-decoration: none;       /* remove underline */
+}
+
+.contact-link:hover {
+    text-decoration: underline;  /* optional hover underline */
+}
+.dark-mode .contact-link {
+    color: #ffffff !important;   /* white text in dark mode */
+}
+/* safer base state */
+.reveal {
+    opacity: 1;
+    transform: none;
+}
+
+/* use an extra class for hiding if you want scroll-in animations */
+.reveal.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
