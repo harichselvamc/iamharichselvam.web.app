@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>H</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>harichselvamc</title>
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/ionicons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #ffffff;
+            color: #000000;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #000000;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        header nav.active {
+            display: flex;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 10%;
+            background: linear-gradient(to right, #ffffff, #f0f0f0);
+        }
+
+        .hero img {
+            width: 370px;
+            border-radius: 10mm;
+            max-width: 100%;
+        }
+
+        .hero .hero-text {
+            max-width: 50%;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 102px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666666;
+        }
+
+        .role {
+            font-size: 24px;
+            color: #000000;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .section {
+            padding: 60px 10%;
+            background: #ffffff;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+            color: #000000;
+        }
+
+        .projects,
+        .skills,
+        .workstation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .certifications {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+
+        .project,
+        .skill,
+        .work-item,
+        .certificate {
+            width: 32%;
+            margin-bottom: 20px;
+            background: #f0f0f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            flex: 0 0 auto;
+            width: calc(100% / 3 - 20px);
+            margin-right: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover,
+        .skill:hover,
+        .work-item:hover,
+        .certificate:hover,
+        .education .education-card:hover,
+        .contact-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .project img,
+        .work-item img,
+        .certificate img {
+            width: 100%;
+            height: auto;
+        }
+
+        .project .content,
+        .skill .content,
+        .work-item .content,
+        .certificate .content {
+            padding: 20px;
+        }
+
+        .project h3,
+        .skill h3,
+        .work-item h3,
+        .certificate h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .project p,
+        .skill p,
+        .work-item p,
+        .certificate p {
+            font-size: 14px;
+            color: #666666;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 60px 10%;
+            background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+        }
+
+        .contact h2 {
+            margin-bottom: 40px;
+            font-size: 36px;
+        }
+
+        .contact .contact-card {
+            background-color: #f0f0f0;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+
+        .contact .contact-card h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+
+        .contact .contact-card p {
+            font-size: 14px;
+            color: #666666;
+            margin: 5px 0;
+        }
+
+        .contact .contact-card .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .contact .contact-card .contact-item ion-icon {
+            margin-right: 10px;
+            color: #000000;
+        }
+
+        .vision {
+            padding: 60px 10%;
+            background: #ffffff;
+            color: #000000;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .vision h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+        }
+
+        .vision .skill-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .vision .skill-wrapper .skill-label {
+            width: 25%;
+            font-size: 18px;
+        }
+
+        .vision .progress-container {
+            width: 70%;
+            background-color: #f0f0f0;
+            border-radius: 13px;
+            overflow: hidden;
+        }
+
+        .vision .progress-container .progress-bar {
+            height: 20px;
+            border-radius: 13px;
+            background-color: #000000;
+            text-align: right;
+            line-height: 20px;
+            color: white;
+            padding-right: 5px;
+            box-sizing: border-box;
+            transition: width 1s ease-in-out;
+        }
+
+        .education {
+            padding: 60px 10%;
+            background: #ffffff;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .education h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+            color: #000000;
+        }
+
+        .education .education-card {
+            background-color: #f0f0f0;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .education .education-card h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+
+        .education .education-card p {
+            font-size: 14px;
+            color: #666666;
+            margin: 5px 0;
+        }
+
+        .education .education-card .date {
+            font-size: 12px;
+            color: #999999;
+        }
+
+        .certifications {
+            text-align: center;
+        }
+
+        .certifications .filter-buttons {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .certifications .filter-buttons .filter-btn {
+            appearance: none;
+            background-color: transparent;
+            border: 2px solid #000000;
+            border-radius: 15px;
+            box-sizing: border-box;
+            color: #000000;
+            cursor: pointer;
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
+            min-height: 60px;
+            min-width: 120px;
+            outline: none;
+            padding: 16px 24px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            user-select: none;
+            touch-action: manipulation;
+            will-change: transform;
+        }
+
+        .certifications .filter-buttons .filter-btn:disabled {
+            pointer-events: none;
+        }
+
+        .certifications .filter-buttons .filter-btn:hover {
+            color: #ffffff;
+            background-color: #000000;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+            transform: translateY(-2px);
+        }
+
+        .certifications .filter-buttons .filter-btn:active {
+            box-shadow: none;
+            transform: translateY(0);
+        }
+
+        .certifications .filter-buttons .filter-btn.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .certifications .certificate {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .certifications .certificate:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hamburger menu */
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 2px;
+            background-color: #000000;
+            margin: 4px 0;
+        }
+
+        .project a {
+            display: inline-block;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+            margin: 5px;
+        }
+
+        .project a:hover {
+            color: #ffffff;
+            background-color: #000000;
+        }
+
+        /* Mobile optimization */
+
+        @media only screen and (max-width: 768px) {
+            header {
+                padding: 10px 5%;
+            }
+            header .logo {
+                font-size: 20px;
+            }
+            header nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #ffffff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            header nav.active {
+                display: flex;
+            }
+            header nav a {
+                margin: 10px 0;
+                font-size: 14px;
+                text-align: center;
+            }
+            header .hamburger {
+                display: flex;
+            }
+            .hero {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero .hero-text {
+                max-width: 100%;
+                text-align: center;
+            }
+            .hero h1 {
+                font-size: 58px;
+            }
+            .hero p,
+            .role {
+                font-size: 16px;
+            }
+            .section {
+                padding: 40px 5%;
+            }
+            .section h2 {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+            .projects,
+            .skills,
+            .workstation {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project,
+            .skill,
+            .work-item,
+            .certificate {
+                width: 90%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .contact form input,
+            .contact form textarea {
+                width: 90%;
+            }
+            .certifications .filter-buttons .filter-btn {
+                width: calc(50% - 10px);
+                margin-bottom: 10px;
+                font-size: 12px;
+                padding: 10px 16px;
+                min-height: auto;
+                min-width: auto;
+                box-sizing: border-box;
+            }
+            .certifications h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            .contact-container {
+                flex-direction: column;
+            }
+            .contact-details,
+            .contact-info {
+                margin: 10px 0;
+            }
+        }
+
+        .button-28 {
+            appearance: none;
+            background-color: transparent;
+            border: 2px solid #000000;
+            border-radius: 15px;
+            box-sizing: border-box;
+            color: #000000;
+            cursor: pointer;
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
+            min-height: 60px;
+            min-width: 120px;
+            outline: none;
+            padding: 16px 24px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            user-select: none;
+            touch-action: manipulation;
+            will-change: transform;
+        }
+
+        .button-28:disabled {
+            pointer-events: none;
+        }
+
+        .button-28:hover {
+            color: #ffffff;
+            background-color: #000000;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+            transform: translateY(-2px);
+        }
+
+        .button-28:active {
+            box-shadow: none;
+            transform: translateY(0);
+        }
+
+        @media only screen and (max-width: 768px) {
+            .button-28 {
+                width: calc(50% - 10px);
+                margin-bottom: 10px;
+                font-size: 12px;
+                padding: 10px 16px;
+                min-height: auto;
+                min-width: auto;
+                box-sizing: border-box;
+            }
+            .certifications h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">harichselvamc</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#works">Projects</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <div class="hero" id="home">
+        <img src="logo.png" alt="Profile Image">
+        <div class="hero-text">
+            <h1>Hey there!</h1>
+            <p class="role">I am <span id="role">a Web Developer</span></p>
+            <p>Passionate about Python, UI/UX design, web development, and data science. Let's create something unique!</p>
+        </div>
+    </div>
+
+    <section class="section" id="experience">
+        <h2>Experience & Skills</h2>
+        <div class="skills">
+            <div class="skill">
+                <div class="content">
+                    <h3>Python Backend Developer | Murven Solutions</h3>
+                    <p><em>June 2023 – August 2023</em></p>
+                    <p>Developed an image processing API using FastAPI, implementing GAN concepts to enhance capabilities. Worked on a Ubuntu AWS machine, gaining experience in cloud computing and advanced image processing techniques.</p>
+                    <p><strong>Techstack:</strong> Python, FastAPI, GAN, AWS, Ubuntu</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="content">
+                    <h3>Online Internship</h3>
+                    <p><em>1 Month Duration</em></p>
+                    <p>Used Python, Streamlit, GoogleTrans Library, and more. Familiar with OpenCV, PyDub, AI, and data science libraries like pandas, Scikit Learn, Matplotlib, and Seaborn.</p>
+                    <p><strong>Techstack:</strong> Python, Streamlit, GoogleTrans, OpenCV, PyDub, Pandas, Scikit Learn, Matplotlib, Seaborn</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="content">
+                    <h3>Virtual Experience | Forage</h3>
+                    <p><em>2022</em></p>
+                    <p>Participated in various virtual experiences with companies like Visa, TATA, KPMG, Accenture, and Murven Solutions. Gained insights into data visualization, data analytics, and backend development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2>I Can Help You With</h2>
+        <div class="skills">
+            <div class="skill">
+                <div class="content">
+                    <h3>Python Development</h3>
+                    <p>With experience in Python programming, I can help you develop robust back-end systems, APIs, and data processing solutions. My expertise includes using frameworks like FastAPI for building efficient and scalable applications.</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="content">
+                    <h3>Data Analysis & Machine Learning</h3>
+                    <p>From data visualization to building predictive models, I have a strong background in data analysis and machine learning. I can assist you with projects involving data cleaning, analysis, and implementing machine learning algorithms
+                        such as logistic regression, decision trees, and k-means clustering.</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="content">
+                    <h3>Web Development</h3>
+                    <p>I specialize in front-end development using HTML, CSS, and JavaScript. I also have experience with frameworks like Streamlit for creating dynamic web applications. Whether you need a personal website, an interactive dashboard, or a
+                        complex web application, I can help you bring your vision to life.</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="content">
+                    <h3>AI & Machine Learning Projects</h3>
+                    <p>My experience includes developing machine learning models for various applications such as heart failure prediction, face detection and recognition, and pneumonia detection using Convolutional Neural Networks (CNN). I can help you
+                        build and deploy AI solutions tailored to your specific needs.</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="content">
+                    <h3>Scientific Computing & Data Visualization</h3>
+                    <p>With a solid foundation in scientific computing and data visualization tools like Matplotlib and Seaborn, I can assist you in analyzing complex datasets and presenting insights in an understandable and visually appealing manner.</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="content">
+                    <h3>Project Management</h3>
+                    <p>Having completed a project management crash course, I am equipped to manage and lead projects effectively, ensuring they are delivered on time and within scope. My organizational skills and attention to detail help in executing successful
+                        projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="works">
+        <h2>Recent Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="languagetranslator.png" alt="Language Translator">
+                <div class="content">
+                    <h3>Language Translator</h3>
+                    <p>This Python project's goal is to translate a piece of text into another language.</p>
+                    <p><strong>Techstack:</strong> Python, GoogleTrans</p>
+                    <a href="https://github.com/harichselvamc/LanguageTranslator">GitHub Link</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="cookmeai.png" alt="CookMeAI">
+                <div class="content">
+                    <h3>CookMeAI</h3>
+                    <p>CookMeAI is a web application designed to elevate culinary adventures using advanced language models and prompt engineering techniques.</p>
+                    <p><strong>Techstack:</strong> Python, Streamlit, Langchain, Ctransformers</p>
+                    <a href="https://github.com/harichselvamc/CookmeAI">GitHub Link</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="profilecard.png" alt="Profile Card Using React">
+                <div class="content">
+                    <h3>Profile Card Using React</h3>
+                    <p>This project showcases a profile card created using React. The card displays user information such as name, photo, and skills, providing an elegant and responsive design.</p>
+                    <p><strong>Techstack:</strong> React, CSS</p>
+                    <a href="https://harichselvamreactcard.netlify.app/">Live Demo</a>
+                    <a href="https://github.com/harichselvamc/react-profile-card">GitHub Link</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2>Education</h2>
+        <div class="education-card">
+            <h3>Bachelor of Technology / Computer Science and Engineering</h3>
+            <p>Dr MGR Educational and Research Institute</p>
+            <p class="date">2021 - Present</p>
+            <p>Specializing in Computer Science and Engineering. Gained a thorough grasp of the field, developed strong analytical and research abilities, and honed communication and problem-solving skills.</p>
+        </div>
+        <div class="education-card">
+            <h3>Higher Secondary Education / Bio Maths Group</h3>
+            <p>Sowdambikaa Matric Boys Higher Secondary School</p>
+            <p class="date">2019 - 2021</p>
+            <p>Completed higher secondary education specializing in Bio Maths group, developing a strong foundation in biology and mathematics.</p>
+        </div>
+        <div class="education-card">
+            <h3>Secondary School Education</h3>
+            <p>Sowdambikaa Matric Boys Higher Secondary School</p>
+            <p class="date">2017 - 2019</p>
+            <p>Completed secondary school education with a solid foundation in various subjects, preparing for higher secondary studies.</p>
+        </div>
+    </section>
+
+
+    <section class="section" id="certifications">
+        <h2>Certifications</h2>
+        <div class="filter-buttons">
+            <button class="button-28 active" data-filter="all">All</button>
+            <button class="button-28" data-filter="python">Python</button>
+            <button class="button-28" data-filter="datascience">Data Science</button>
+            <button class="button-28" data-filter="ml">Machine Learning</button>
+            <button class="button-28" data-filter="sql">SQL</button>
+            <button class="button-28" data-filter="technicalsupport">Technical Support</button>
+            <button class="button-28" data-filter="cicd">CI/CD</button>
+        </div>
+        <div class="certifications">
+            <div class="certificate" data-category="python">
+                <img src="python1.jpeg" alt="Python Certificate">
+                <div class="content">
+                    <h3>Python Certificate</h3>
+                    <p>Issued by Google</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="python">
+                <img src="python9.jpeg" alt="Python Certificate 9">
+                <div class="content">
+                    <h3>Python Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="python">
+                <img src="python10.jpeg" alt="Python Certificate 10">
+                <div class="content">
+                    <h3>Python Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="python">
+                <img src="python11.jpeg" alt="Python Certificate 11">
+                <div class="content">
+                    <h3>Python Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="python">
+                <img src="python12.jpeg" alt="Python Certificate 12">
+                <div class="content">
+                    <h3>Python Certificate</h3>
+                    <p>Issued by UST</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="datascience">
+                <img src="datascience.jpeg" alt="Data Science Certificate">
+                <div class="content">
+                    <h3>Data Science Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="datascience">
+                <img src="datascience2.jpeg" alt="Data Science Certificate 2">
+                <div class="content">
+                    <h3>Data Science Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="datascience">
+                <img src="datascience3.jpeg" alt="Data Science Certificate 3">
+                <div class="content">
+                    <h3>Data Science Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="datascience">
+                <img src="dataanalysis1.jpeg" alt="Data Analysis Certificate">
+                <div class="content">
+                    <h3>Data Analysis Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="datascience">
+                <img src="dataanalysis2.jpeg" alt="Data Analysis Certificate 2">
+                <div class="content">
+                    <h3>Data Analysis Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="ml">
+                <img src="ml1.jpeg" alt="ML Certificate 1">
+                <div class="content">
+                    <h3>ML Certificate</h3>
+                    <p>Issued by DeepLearning.AI</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="datascience">
+                <img src="datascience.jpeg" alt="datascience Certificate">
+                <div class="content">
+                    <h3>Datascience Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="datascience">
+                <img src="datascience3.jpeg" alt="datascience Certificate">
+                <div class="content">
+                    <h3>Datascience Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="datascience">
+                <img src="datascience2.jpeg" alt="datascience Certificate">
+                <div class="content">
+                    <h3>Datascience Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="datascience">
+                <img src="python9.jpeg" alt="datascience Certificate">
+                <div class="content">
+                    <h3>Datascience Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="datascience">
+                <img src="python10.jpeg" alt="datascience Certificate">
+                <div class="content">
+                    <h3>Datascience Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="datascience">
+                <img src="python11.jpeg" alt="datascience Certificate">
+                <div class="content">
+                    <h3>Datascience Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="python">
+                <img src="python13.png" alt="python Certificate">
+                <div class="content">
+                    <h3>Python Certificate</h3>
+                    <p>Issued by Guvi</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="sql">
+                <img src="sql1.jpeg" alt="SQL Certificate 2">
+                <div class="content">
+                    <h3>SQL Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="sql">
+                <img src="sql2.png" alt="SQL Certificate 2">
+                <div class="content">
+                    <h3>SQL Basic Certificate</h3>
+                    <p>Issued by HackerRank</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="sql">
+                <img src="sql3.png" alt="SQL Certificate 3">
+                <div class="content">
+                    <h3>SQL Intermediate Certificate</h3>
+                    <p>Issued by HackerRank</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="technicalsupport">
+                <img src="technicalsupport.jpeg" alt="Technical Support Certificate">
+                <div class="content">
+                    <h3>Technical Support Certificate</h3>
+                    <p>Issued by Google</p>
+                </div>
+            </div>
+            <div class="certificate" data-category="cicd">
+                <img src="cicd.jpeg" alt="Continuous Delivery and Integration Certificate">
+                <div class="content">
+                    <h3>Continuous Delivery and Integration Certificate</h3>
+                    <p>Issued by IBM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Let's Talk About Your Project</h2>
+        <div class="container contact-container">
+            <div class="contact-card">
+                <h3>Email</h3>
+                <div class="contact-item">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <a href="mailto:harichselvamc@gmail.com" style="color: #000000; text-decoration: none;">harichselvamc@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <h3>LinkedIn</h3>
+                <div class="contact-item">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <a href="https://linkedin.com/in/harichselvamc" target="_blank" style="color: #000000; text-decoration: none;">linkedin.com/in/harichselvamc</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <h3>Phone</h3>
+                <div class="contact-item">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <a href="tel:+917598068106" style="color: #000000; text-decoration: none;">+91 7598068106</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <h3>GitHub</h3>
+                <div class="contact-item">
+                    <ion-icon name="logo-github"></ion-icon>
+                    <a href="https://github.com/harichselvamc" target="_blank" style="color: #000000; text-decoration: none;">github.com/harichselvamc</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <h3>Location</h3>
+                <div class="contact-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <span>Chennai, India</span>
+                </div>
+            </div>
+            <div class="contact-card">
+                <h3>Website</h3>
+                <div class="contact-item">
+                    <ion-icon name="globe-outline"></ion-icon>
+                    <a href="https://iamharichselvam.web.app" target="_blank" style="color: #000000; text-decoration: none;">iamharichselvam.web.app</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Map</h3>
+                <div class="map">
+                    <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=chennai+(harichselvam)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps systems</a></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Progress bars animation
+            var progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(function(bar) {
+                var width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(function() {
+                    bar.style.width = width;
+                }, 100);
+            });
+
+            // Filter buttons and certificates functionality
+            var filterButtons = document.querySelectorAll('.button-28');
+            var certificates = document.querySelectorAll('.certificate');
+
+            filterButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(function(btn) {
+                        btn.classList.remove('active');
+                        btn.style.backgroundColor = 'transparent';
+                        btn.style.color = '#000000';
+                    });
+                    this.classList.add('active');
+                    this.style.backgroundColor = '#000000';
+                    this.style.color = '#ffffff';
+
+                    var filter = this.getAttribute('data-filter');
+                    certificates.forEach(function(certificate) {
+                        if (filter === 'all' || certificate.getAttribute('data-category') === filter) {
+                            certificate.style.display = 'block';
+                        } else {
+                            certificate.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Dynamic role text change
+            const roles = ["a Web Developer", "a UI/UX Designer", "a Python Developer"];
+            let roleIndex = 0;
+            const roleElement = document.getElementById('role');
+
+            function changeRole() {
+                roleElement.textContent = roles[roleIndex];
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(changeRole, 2000);
+            }
+
+            changeRole();
+
+            // Hamburger menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('header nav');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+
+</body>
+
+</html>
