@@ -995,6 +995,17 @@ header nav.active {
     #about .skills {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+    .reveal {
+    opacity: 1;
+    transform: none;
+}
+
+/* use an extra class for hiding if you want scroll-in animations */
+.reveal.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
 }
 .reveal {
     opacity: 0;
