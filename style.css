@@ -1,0 +1,978 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #000000;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #ffffff;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000000;
+}
+
+header nav.active {
+    display: flex;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+}
+
+.hero img {
+    width: 370px;
+    border-radius: 10mm;
+    max-width: 100%;
+}
+
+.hero .hero-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 102px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666666;
+}
+
+.role {
+    font-size: 24px;
+    color: #000000;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.section {
+    padding: 60px 10%;
+    background: #ffffff;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #000000;
+}
+
+.projects,
+.skills,
+.workstation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.certifications {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.project,
+.skill,
+.work-item,
+.certificate {
+    width: 32%;
+    margin-bottom: 20px;
+    background: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 0 0 auto;
+    width: calc(100% / 3 - 20px);
+    margin-right: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover,
+.skill:hover,
+.work-item:hover,
+.certificate:hover,
+.education .education-card:hover,
+.contact-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project img,
+.work-item img,
+.certificate img {
+    width: 100%;
+    height: auto;
+}
+
+.project .content,
+.skill .content,
+.work-item .content,
+.certificate .content {
+    padding: 20px;
+}
+
+.project h3,
+.skill h3,
+.work-item h3,
+.certificate h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project p,
+.skill p,
+.work-item p,
+.certificate p {
+    font-size: 14px;
+    color: #666666;
+}
+
+.contact {
+    text-align: center;
+    padding: 60px 10%;
+    background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+}
+
+.contact h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.contact .contact-card {
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.contact .contact-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.contact .contact-card p {
+    font-size: 14px;
+    color: #666666;
+    margin: 5px 0;
+}
+
+.contact .contact-card .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact .contact-card .contact-item ion-icon {
+    margin-right: 10px;
+    color: #000000;
+}
+
+.vision {
+    padding: 60px 10%;
+    background: #ffffff;
+    color: #000000;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vision h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.vision .skill-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.vision .skill-wrapper .skill-label {
+    width: 25%;
+    font-size: 18px;
+}
+
+.vision .progress-container {
+    width: 70%;
+    background-color: #f0f0f0;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.vision .progress-container .progress-bar {
+    height: 20px;
+    border-radius: 13px;
+    background-color: #000000;
+    text-align: right;
+    line-height: 20px;
+    color: white;
+    padding-right: 5px;
+    box-sizing: border-box;
+    transition: width 1s ease-in-out;
+}
+
+.education {
+    padding: 60px 10%;
+    background: #ffffff;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.education h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #000000;
+}
+
+.education .education-card {
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education .education-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.education .education-card p {
+    font-size: 14px;
+    color: #666666;
+    margin: 5px 0;
+}
+
+.education .education-card .date {
+    font-size: 12px;
+    color: #999999;
+}
+
+.certifications {
+    text-align: center;
+}
+
+.certifications .filter-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.certifications .filter-buttons .filter-btn {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 120px;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.certifications .filter-buttons .filter-btn:hover {
+    color: #ffffff;
+    background-color: #000000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.certifications .filter-buttons .filter-btn.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.certifications .certificate {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.certifications .certificate:hover {
+    transform: scale(1.05);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000000;
+    margin: 4px 0;
+}
+
+.project a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    margin: 5px;
+}
+
+.project a:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/* Mobile responsive */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px 5%;
+    }
+    header .logo {
+        font-size: 20px;
+    }
+    header nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    header nav.active {
+        display: flex;
+    }
+    header nav a {
+        margin: 10px 0;
+        font-size: 14px;
+        text-align: center;
+    }
+    header .hamburger {
+        display: flex;
+    }
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 58px;
+    }
+    .hero p,
+    .role {
+        font-size: 16px;
+    }
+    .section {
+        padding: 40px 5%;
+    }
+    .section h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    .projects,
+    .skills,
+    .workstation {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project,
+    .skill,
+    .work-item,
+    .certificate {
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .certifications .filter-buttons .filter-btn {
+        width: calc(50% - 10px);
+        margin-bottom: 10px;
+        font-size: 12px;
+        padding: 10px 16px;
+        min-height: auto;
+        min-width: auto;
+        box-sizing: border-box;
+    }
+}
+/* Services grid for About section */
+#about .skills {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Override global .skill sizing in this section */
+#about .skill {
+    width: auto;
+    margin-right: 0;
+}
+
+/* Service card styling */
+.service-card {
+    background: #f7f7f7;
+    border-radius: 12px;
+    padding: 22px 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: floatUp 0.6s ease-out forwards;
+}
+
+/* Staggered animation */
+#about .service-card:nth-child(1) { animation-delay: 0.0s; }
+#about .service-card:nth-child(2) { animation-delay: 0.08s; }
+#about .service-card:nth-child(3) { animation-delay: 0.16s; }
+#about .service-card:nth-child(4) { animation-delay: 0.24s; }
+#about .service-card:nth-child(5) { animation-delay: 0.32s; }
+#about .service-card:nth-child(6) { animation-delay: 0.40s; }
+
+/* Icon circle */
+.service-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.service-icon ion-icon {
+    font-size: 20px;
+}
+
+/* Titles & text inside cards */
+#about .service-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#about .service-card p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Card hover */
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Entrance animation */
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* YouTube channel link styling */
+.yt-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+    padding-bottom: 2px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.yt-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #000000;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+
+.yt-link ion-icon {
+    font-size: 18px;
+    transition: transform 0.25s ease;
+}
+
+.yt-link:hover {
+    transform: translateX(2px);
+    color: #111111;
+}
+
+.yt-link:hover::after {
+    transform: scaleX(1);
+}
+
+.yt-link:hover ion-icon {
+    transform: scale(1.1);
+}
+
+/* CTA under services */
+.services-cta {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.services-cta p {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 12px;
+}
+
+/* Reuse / define primary button */
+.btn-primary {
+    appearance: none;
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 26px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Slight pulse on the services button specifically */
+.services-btn {
+    animation: subtlePulse 2.4s ease-in-out infinite;
+}
+
+@keyframes subtlePulse {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    50% {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    }
+}
+
+/* Responsive grid: 2 cols on tablets, 1 col on mobile */
+@media only screen and (max-width: 992px) {
+    #about .skills {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #about .skills {
+        grid-template-columns: 1fr;
+    }
+}
+/* Education Section Enhancements */
+.education {
+    position: relative;
+}
+
+/* Icon Style */
+.edu-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.edu-icon ion-icon {
+    font-size: 20px;
+}
+
+/* Timeline Accent (optional) */
+.education-card {
+    position: relative;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.education-card::before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background: #000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 2px;
+    opacity: 0.15;
+}
+
+/* Card Hover */
+.education-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Smooth entrance animation */
+.education-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: eduFadeIn 0.6s ease forwards;
+}
+
+.education-card:nth-child(1) { animation-delay: 0s; }
+.education-card:nth-child(2) { animation-delay: 0.15s; }
+.education-card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes eduFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Certification Filter Buttons – Modern Style */
+.filter-buttons .button-28 {
+    appearance: none;
+    background: #ffffff;
+    border: 1.8px solid #000000;
+    border-radius: 50px;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #000000;
+    letter-spacing: 0.3px;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.filter-buttons .button-28:hover {
+    background: #000000;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+
+/* ACTIVE button */
+.filter-buttons .button-28.active {
+    background: #000000 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.22);
+}
+/* Research Section */
+#research .research-card {
+    background: #f7f7f7;
+    padding: 22px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+#research .research-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+#research h3 {
+    margin-bottom: 10px;
+}
+
+#research p {
+    font-size: 14px;
+    color: #555;
+    margin: 6px 0;
+}
+
+/* View Publication Button */
+.research-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.research-btn:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-2px);
+}
+/* YouTube Card Accent */
+.youtube-card {
+    border-left: 4px solid #ff0000;
+}
+
+/* YouTube Icon Red Accent */
+.yt-icon {
+    color: #ff0000 !important;
+    font-size: 20px;
+}
+
+/* Embed Frame Styling */
+.yt-preview {
+    margin-top: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on video preview */
+.youtube-card:hover .yt-preview {
+    transform: scale(1.02);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+/* Follow button */
+.yt-follow-btn {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.yt-follow-btn:hover {
+    background: #ff0000;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+/* === Upgraded Award Card === */
+.award-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 18px;
+    align-items: center;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+    margin: 18px 0;
+    position: relative;
+    overflow: visible;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    max-width: 980px;
+}
+
+/* left trophy accent */
+.award-card::before {
+    content: "🏆";
+    position: absolute;
+    left: -10px;
+    top: 12px;
+    font-size: 34px;
+    transform: rotate(-8deg);
+    opacity: 0.9;
+    pointer-events: none;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* hover lift */
+.award-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(2,6,23,0.10);
+}
+
+/* narrow column for image */
+.award-thumb {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 0 0 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0,0,0,0.04);
+    background: linear-gradient(135deg, #ffffff, #f5f6fb);
+    box-shadow: inset 0 -4px 12px rgba(0,0,0,0.02);
+}
+
+/* the award image */
+.award-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* text area */
+.award-meta {
+    padding: 4px 2px 4px 0;
+}
+
+.award-meta h3 {
+    margin: 0 0 6px 0;
+    font-size: 18px;
+    letter-spacing: -0.2px;
+}
+
+.award-meta p {
+    margin: 0;
+    font-size: 13.5px;
+    color: #444;
+    line-height: 1.45;
+}
+
+/* small badge and year */
+.award-badge {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.award-pill {
+    background: rgba(0,0,0,0.92);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+}
+
+/* subtle entry animation */
+@keyframes awardPop {
+    from { transform: translateY(14px) scale(.99); opacity: 0; }
+    to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+.award-card { animation: awardPop 420ms cubic-bezier(.2,.9,.2,1) both; }
+
+/* responsive: stack on small screens */
+@media (max-width: 720px) {
+    .award-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 14px;
+    }
+    .award-thumb {
+        width: 100%;
+        height: 220px;
+        border-radius: 10px;
+    }
+    .award-card::before { left: 10px; top: 8px; font-size: 28px; transform: rotate(0); }
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    overflow: auto;
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
